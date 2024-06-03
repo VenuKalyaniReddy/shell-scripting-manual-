@@ -37,7 +37,7 @@ fi
 
     VALIDATE
 
-    yum install oracle -y
+    yum install nodejs -y
 
     VALIDATE
 
