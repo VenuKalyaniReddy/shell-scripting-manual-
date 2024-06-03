@@ -8,7 +8,7 @@ VALIDATE () {
 
         echo "Error :: Installing python is failed"
 
-        exit1
+        exit 1
 
     else
 
@@ -25,7 +25,7 @@ then
     
     echo "Error:: Please run the script with root access"
 
-    exit1
+    exit 1
 
 else
 
@@ -40,7 +40,7 @@ fi
     yum install oracle -y
 
     VALIDATE
-    
+
 
 
 
