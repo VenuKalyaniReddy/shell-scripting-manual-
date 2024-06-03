@@ -13,18 +13,17 @@ else
 
 fi
 
-    yum install python -y
+    yum install git -y
 
 if [ $? -ne 0 ]
 
 then 
 
-    echo "Error:: Installing python is Failed"
+    echo "Error:: Installing GIT is Failed"
     exit1
 
 else
 
-    echo "Installing python is Success"
+    echo "Installing GIT is Success"
 
 fi
-
