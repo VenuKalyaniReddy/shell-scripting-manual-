@@ -2,23 +2,20 @@
 
 ID=$(id -u)
 
-    TIMESTAMP=$(date +%F-%H-%M-%S)
-    LOGFILE= "/tmp/$0 -%TIMESTAMP.log"
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-    VALIDATE () {
+VALIDATE () {
         
-if [ $1 -ne 0 ]
+   if [ $1 -ne 0 ]
 
-then 
-
-    echo "Error ::$2......FAILED"
-    exit 1
-
-else
-
-    echo "$2......SUCCESS"
-
-fi
+    then 
+        echo "Error ::$2......FAILED"
+        exit 1
+    else
+        echo "$2......SUCCESS"
+    fi
+}
 
 if [ $ID -ne 0 ]
 
