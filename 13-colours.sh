@@ -11,31 +11,29 @@ N="\e[0m"
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-VALIDATE(){
-    echo "Script started exectuing at $TIMESTAMP
-if [ $1 -ne 0 ]
-then 
-    echo -e "ERROR::$2.....$R FAILED $N"
-    exit 1
-else
-    echo -e "$2......$G SUCCESS $N"
+VALIDATE () {
+        
+   if [ $1 -ne 0 ]
 
-fi
+    then 
+        echo "Error ::$2......FAILED"
+        exit 1
+    else
+        echo "$2......SUCCESS"
+    fi
 }
 
 if [ $ID -ne 0 ]
+
 then 
-
-    echo -e "$R Error: please run this script with root access $N"
+    echo "Error:: Please run this script as a rot user"
     exit 1
-
 else
-    echo "you are root user"
+    echo "you are a root user"
 fi
 
 yum install mysql -y &>> $LOGFILE
 VALIDATE $? "INSTALLING MYSQL"
 yum install git -y &>> $LOGFILE
 VALIDATE $? "INSTALLING GIT"
-
 
