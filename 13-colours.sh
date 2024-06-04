@@ -16,10 +16,10 @@ VALIDATE () {
    if [ $1 -ne 0 ]
 
     then 
-        echo "Error ::$2......FAILED"
+        echo "Error ::$2......$R FAILED $N"
         exit 1
     else
-        echo "$2......SUCCESS"
+        echo "$2......$G SUCCESS $N"
     fi
 }
 
