@@ -1,0 +1,5 @@
+#git add 12-logfile.sh  ====adding the files 
+
+#git commit -m "first commit" ====commit the git
+
+#git push -u origin main ====push  git to remotely 
