@@ -3,7 +3,7 @@
 ID=$(id -u)
 
     TIMESTAMP=$(date +%F-%H-%M-%S)
-    LOGFILE= "/tmp/$0-%TIMESTAMP.log"
+    LOGFILE= "/tmp/$0 -%TIMESTAMP.log"
 
     VALIDATE () {
         
@@ -18,15 +18,19 @@ else
 
     echo "$2......SUCCESS"
 
-then
+fi
+
+if [ $ID -ne 0 ]
+
+then 
 
     echo "Error:: Please run this script as a rot user"
 
     exit 1
+
 else
 
     echo "you are a root user"
-
 
 fi
 
