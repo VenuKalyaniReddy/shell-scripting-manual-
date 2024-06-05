@@ -10,14 +10,15 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 
-VALIDATE(){
-    if [ $1 -ne 0 ]
-    then
-        echo -e "ERROR:: $2 ... $R FAILED $N"
-        exit 1
-    else
-        echo -e "$2 ... $G SUCCESS $N"
-    fi
+VALIDATE () {
+
+if [ $1 -ne 0 ]
+then
+    echo -e "ERROR:: $2 ... $R FAILED $N"
+    exit 1
+else
+    echo -e "$2 ... $G SUCCESS $N"
+fi
 }
 
 if [ $ID -ne 0 ]
@@ -35,6 +36,7 @@ fi # fi means reverse of if, indicating condition end
 for package in $@
 do
 yum list installed $package &>>$LOGFILE
+
 if [ $? -ne 0 ]
 
 then 
