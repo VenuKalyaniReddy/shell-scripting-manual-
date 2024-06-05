@@ -41,7 +41,7 @@ if [ $? -ne 0 ]
 
 then 
 yum install $package -y &>>$LOGFILE
-VALIDATE $? "Installing of $packages" #validate
+VALIDATE $? "Installing of $G..... $packages $N" #validate
 
 else
 
